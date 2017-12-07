@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<font face = "Century Gothic" size = "5">
+<head>
+
+
+<style type="text/css">
+body{
+  background-color: #697ea5;
+  color: white;
+}
+hr {
+
+    border-color: #005576;
+
+    border-width: 2px;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.nav{
+    background: black;
+    width: 100%;
+}
+.nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: -4px;
+    position: relative;
+    padding: 5px 5px;
+}
+.nav a{
+
+
+
+    display: block;
+    text-decoration: none;
+    .sidenav {
+        height: 100%; /* 100% Full-height */
+        width: 0; /* 0 width - change this with JavaScript */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Stay on top */
+        top: 0;
+        left: 0;
+        background-color: #111; /* Black*/
+        overflow-x: hidden; /* Disable horizontal scroll */
+        padding-top: 60px; /* Place content 60px from the top */
+        transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    }
+
+    /* The navigation menu links */
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+    /* When you mouse over the navigation links, change their color */
+    .sidenav a:hover{
+        color: #f1f1f1;
+    }
+
+    /* Position and style the close button (top right corner) */
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+    /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+    #main {
+
+        transition: margin-left .5s;
+        padding: 20px;
+    }
+
+    /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+    @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+    }
+
+}
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #131313; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+
+    transition: 0s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 18px  32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    text-align: center;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover{
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left 0s;
+    padding: 0px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+</style>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+<div class="nav" align="right">
+    <ul>
+<li><a href="https://jonnychiwa.github.io/"><img src="https://i.imgur.com/erI3TJf.png" alt="weRchan" style="width:100px;height:60px;" align="center"></a></li>
+        <li><font size = "4"><a href="https://jonnychiwa.github.io/about.html" style="color: white">About</a></li></font>
+
+        <li><font size = "2">
+              Account
+          <a href="https://github.com/join?source=header-home" style="color:#4eab38">Sign Up</a>
+        </li>
+        /
+        <li><a href="https://github.com/login?return_to=%2Fjoin%3Fsource%3Dheader-home" style="color:#68cdcd">Sign In</a>
+      </font></li>
+
+    </ul>
+
+</div>
+
+<hr style="color: #005576" >
+
+
+</head>
+
+<br>
+<body>
+  <div id="mySidenav" class="sidenav">
+    <a>-sections-</a>
+    <hr>
+    <a href="#">art</a>
+    <hr>
+    <a href="#">music</a>
+    <hr>
+    <a href="#">tv</a>
+    <hr>
+    <a href="#">movies</a>
+    <hr>
+  </div>
+
+  <!-- Use any element to open the sidenav -->
+  <span onclick="openNav()" style="color: #005576">►</span>
+
+
+  <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+  <div id="main">
+  <span onclick="closeNav()" style="color: #005576">◄</span>
+  </div>
+  <h1 style="text-align:center;">
+    <font size = "10">
+About us...</h1>
+
+</font>
+<p style="margin: 2cm; ">
+  WeRchan™ will be a free social media platform developed by the handsome Jonathan Nguyen that combines:</p>
+<p style="margin: 1cm 4cm ;">●The anonymity, algorithms, format, and free roam of 4chan</p>
+<p style="margin: 2cm 4cm ;">●The save ability, HTML media support, and subsections of Reddit</p>
+<p style="margin: 2cm 4cm ;">●And the filtration, sharing, and easy use of Instagram and Tumblr</p>
+
+<p style="margin: 2cm ;">It can be the ULTIMATE online network and the FUTURE of the mainstream internet.
+</p>
+<p style="margin: 2cm; ">Contact Information: jnguye21@mail.sfsu.edu</p>
+<br>
+
+</body>
+  </font>
+</html>
