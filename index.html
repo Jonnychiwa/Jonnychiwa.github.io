@@ -33,7 +33,7 @@ hr {
 .nav a{
 
 
-    padding: 5px 5px;
+
     display: block;
     text-decoration: none;
     .sidenav {
@@ -151,8 +151,9 @@ function closeNav() {
 
 <div class="nav" align="right">
     <ul>
-      <img src="https://imgur.com/erI3TJf" alt="weRchan" style="width:104px;height:142px;" >
+<li><a href="https://jonnychiwa.github.io/"><img src="https://i.imgur.com/erI3TJf.png" alt="weRchan" style="width:100px;height:60px;" align="center"></a></li>
         <li><font size = "4"><a href="#" style="color: white">About</a></li></font>
+
         <li><font size = "2">
               Account
           <a href="https://github.com/join?source=header-home" style="color:#4eab38">Sign Up</a>
@@ -197,3 +198,14 @@ function closeNav() {
 </body>
   </font>
 </html>
+[form.html]
+``<html><body><h1>Post here:</h1><form name="theform" action="post.php" method="post"><textarea name="comment" placeholder="Post a comment here" rows="8" cols="64"></textarea> <input type="submit" name="submit" value="Reply" /></form></body></html>
+
+[post.php]
+``<?php $conn = mysql_connect('localhost','root',''); $db = mysql_select_db('wakaba_beta',$conn);
+$mysql_query("INSERT INTO wakaba_beta.posts (name,comment) VALUES ('Anonymous','".mysql_real_escape_string($_POST['comment'])."');
+mysql_close();
+header('location:posts.html'); ?>
+
+[posts.html]
+``<html><body><h1>Showing all posts:</h1><?php $query = mysql_query('SELECT * FROM wakaba_beta.posts; foreach($row = mysql_fetch_assoc($query) { echo "<p>Name: ".$row['name']."<br />".htmlspecialchars(str_replace(PHP.EOL,"<br />",$row['comment']))."</p>"; ?></body></html>
